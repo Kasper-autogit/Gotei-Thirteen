@@ -1,0 +1,1438 @@
+
+/* =========================================
+   GOTEI THIRTEEN — WEBSITE STYLES
+   Classic Horde x Anime-inspired design
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+/* COLOR VARIABLES */
+:root {
+    --background: #0b0b0e;
+    --surface: #151418;
+    --surface-light: #201b20;
+    --red: #ae242c;
+    --red-bright: #e3444e;
+    --red-dark: #4c1119;
+    --gold: #c8a46a;
+    --text: #f3eee8;
+    --muted: #aaa0a0;
+    --border: #3e2a2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    line-height: 1.3;
+}
+
+p {
+    color: var(--muted);
+}
+
+::selection {
+    background: var(--red);
+    color: white;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 11, 14, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    min-height: 80px;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.guild-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.guild-logo strong {
+    color: var(--red-bright);
+}
+
+.logo-symbol {
+    color: var(--gold);
+    font-size: 32px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #d1c7c4;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.footer-links a:hover {
+    color: var(--red-bright);
+}
+
+.nav-button {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 18px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.nav-button:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 780px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 110px 8%;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(
+            ellipse at 80% 45%,
+            rgba(130, 19, 28, 0.28),
+            transparent 50%
+        ),
+        linear-gradient(
+            120deg,
+            #100e13 10%,
+            #2d1019 60%,
+            #0a090c 100%
+        );
+}
+
+.hero-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        120deg,
+        transparent 0,
+        transparent 90px,
+        rgba(255,255,255,0.015) 91px,
+        transparent 92px
+    );
+}
+
+/* Future character silhouette container */
+.hero-character {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 48%;
+    height: 100%;
+    opacity: 0.14;
+    pointer-events: none;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(225, 38, 48, 0.5),
+        transparent 65%
+    );
+    z-index: -1;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.separator {
+    color: var(--red-bright);
+    padding: 0 10px;
+}
+
+.hero h1 {
+    font-size: clamp(58px, 8vw, 118px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin: 24px 0;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--red-bright);
+    text-shadow: 0 0 45px rgba(170, 25, 35, 0.35);
+}
+
+.hero-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(17px, 2vw, 24px);
+    color: var(--gold);
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 620px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #c9bfc0;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 36px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 25px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: all 0.25s;
+}
+
+.button-primary {
+    background: var(--red);
+    color: white;
+    border: 1px solid var(--red);
+}
+
+.button-primary:hover {
+    background: var(--red-bright);
+    transform: translateY(-3px);
+}
+
+.button-outline {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.button-outline:hover {
+    background: var(--gold);
+    color: #111;
+    transform: translateY(-3px);
+}
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 70px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #9e8585;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 30px;
+    right: 6%;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+/* =========================================
+   GLOBAL SECTIONS
+========================================= */
+
+.section {
+    padding: 110px 8%;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 15px 0;
+}
+
+.heading-line {
+    width: 85px;
+    height: 3px;
+    margin: 22px auto;
+    background: linear-gradient(
+        to right,
+        var(--red),
+        var(--gold)
+    );
+}
+
+.section-heading > p:last-child {
+    line-height: 1.8;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 24px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.guild-values {
+    display: grid;
+    gap: 16px;
+}
+
+.value-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    padding: 23px 28px;
+    transition: 0.2s;
+}
+
+.value-card:hover {
+    background: var(--surface-light);
+    transform: translateX(5px);
+}
+
+.value-icon {
+    color: var(--gold);
+    font-size: 25px;
+}
+
+.value-card h4 {
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.events-section {
+    border-top: 1px solid var(--border);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.event-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: 0.25s;
+}
+
+.event-card:hover {
+    border-color: var(--red);
+    transform: translateY(-4px);
+}
+
+.event-image {
+    min-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background:
+        radial-gradient(
+            circle,
+            rgba(190,30,40,0.3),
+            transparent 60%
+        ),
+        linear-gradient(135deg, #461119, #111014);
+}
+
+.event-symbol {
+    font-size: 95px;
+    color: var(--red-bright);
+    opacity: 0.6;
+}
+
+.event-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--red);
+    padding: 7px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.event-details {
+    padding: 32px;
+}
+
+.event-date {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.event-details h3 {
+    margin: 12px 0 18px;
+    font-size: 26px;
+}
+
+.event-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.event-info span,
+.event-status {
+    display: inline-block;
+    padding: 7px 11px;
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-size: 11px;
+}
+
+.event-status {
+    border-color: var(--red);
+    color: var(--red-bright);
+}
+
+.future-event {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px;
+    border-style: dashed;
+}
+
+.future-icon {
+    display: block;
+    font-size: 55px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.future-event h3 {
+    margin-bottom: 16px;
+}
+
+/* =========================================
+   ROSTER
+========================================= */
+
+.roster-section {
+    border-top: 1px solid var(--border);
+}
+
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 290px), 1fr)
+    );
+    gap: 25px;
+}
+
+.member-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.member-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.member-portrait {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(
+            circle,
+            rgba(160,24,30,0.25),
+            transparent 65%
+        ),
+        #21171d;
+}
+
+.class-symbol {
+    font-size: 65px;
+    color: var(--gold);
+}
+
+.member-details {
+    padding: 25px;
+}
+
+.member-rank {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.member-details h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.member-class {
+    color: #c8a270;
+    font-weight: 700;
+}
+
+.member-role,
+.member-server {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.armory-pending {
+    display: inline-block;
+    margin-top: 22px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+    color: var(--red-bright);
+    font-size: 12px;
+}
+
+.placeholder-card {
+    border-style: dashed;
+}
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-section {
+    border-top: 1px solid var(--border);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+
+.gallery-placeholder {
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: var(--gold);
+    background: linear-gradient(
+        135deg,
+        #35151c,
+        #171419
+    );
+    transition: 0.3s;
+}
+
+.gallery-item:hover .gallery-placeholder {
+    background: #511920;
+}
+
+.gallery-item h3 {
+    font-size: 17px;
+    margin: 23px 22px 8px;
+}
+
+.gallery-item p {
+    margin: 0 22px;
+    font-size: 13px;
+}
+
+/* =========================================
+   COMMUNITY
+========================================= */
+
+.community-section {
+    padding: 110px 8%;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(139, 20, 30, 0.25),
+            transparent 70%
+        ),
+        #111013;
+}
+
+.community-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.community-content h2 {
+    margin: 18px 0 24px;
+    font-size: clamp(30px, 4vw, 46px);
+}
+
+.community-badge {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 12px 25px;
+    margin: 35px 0 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.community-note {
+    font-size: 13px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding: 60px 8% 35px;
+    background: #09090b;
+    text-align: center;
+}
+
+.footer-brand h3 {
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.footer-links a {
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.footer-disclaimer,
+.copyright {
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .about-layout,
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 100px 6% 80px;
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 12vw, 72px);
+        word-break: normal;
+    }
+
+    .hero-meta {
+        margin-top: 40px;
+        gap: 12px;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+/* ======================================
+   GOTEI THIRTEEN — CUSTOM HORDE ARTWORK
+====================================== */
+
+.hero-background {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(8, 6, 10, 0.97) 0%,
+            rgba(8, 6, 10, 0.83) 35%,
+            rgba(15, 5, 9, 0.22) 100%
+        ),
+        url("assets/images/horde-banner.jpg");
+
+    background-size: cover;
+    background-position: 65% center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* ======================================
+   GUILD EVENTS — BLEACH BACKGROUND
+====================================== */
+
+.events-section {
+    position: relative;
+    max-width: none;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(10, 8, 12, 0.95) 0%,
+            rgba(10, 8, 12, 0.80) 50%,
+            rgba(10, 8, 12, 0.88) 100%
+        ),
+        url("assets/images/bleach-shadow-warrior.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Keep event content contained */
+.events-section > * {
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ======================================
+   ABOUT SECTION — CAMPFIRE ARTWORK
+====================================== */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.about-artwork {
+    grid-column: 1 / -1;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.about-artwork img {
+    display: block;
+    width: 100%;
+    max-height: 490px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.about-artwork:hover img {
+    transform: scale(1.035);
+}
+
+.about-artwork::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(7, 6, 10, 0.9),
+        transparent 50%
+    );
+    pointer-events: none;
+}
+
+.artwork-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 35px;
+    z-index: 2;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(14px, 2vw, 22px);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-artwork {
+        grid-column: 1;
+    }
+
+    .artwork-caption {
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+
+/* ======================================
+   INTERACTIVE GUILD ARTWORK
+====================================== */
+
+.about-artwork {
+    position: relative;
+    height: 490px;
+    overflow: hidden;
+
+    border: 2px solid #8b6a3e;
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 25px rgba(180, 30, 40, 0.15),
+        inset 0 0 15px rgba(0, 0, 0, 0.5);
+
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Both images fill the same space */
+.about-artwork img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        opacity 0.65s ease,
+        transform 1s ease;
+}
+
+/* Campfire visible normally */
+.artwork-default {
+    opacity: 1;
+}
+
+/* Warchief hidden normally */
+.artwork-hover {
+    opacity: 0;
+}
+
+/* When cursor enters the artwork */
+.about-artwork:hover {
+    border-color: #e0b86a;
+
+    box-shadow:
+        0 0 35px rgba(220, 65, 45, 0.35);
+}
+
+/* Crossfade to the Warchief */
+.about-artwork:hover .artwork-default {
+    opacity: 0;
+    transform: scale(1.08);
+}
+
+.about-artwork:hover .artwork-hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+/* Keep caption above both pictures */
+.artwork-caption {
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .about-artwork {
+        height: 320px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-artwork,
+    .about-artwork img {
+        transition: none;
+    }
+}
+
+
+
+/* =========================================
+   GUILD MOTTO — HOVER TRANSITION
+========================================= */
+
+/* Caption container */
+.artwork-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 35px;
+    right: 35px;
+    z-index: 3;
+    pointer-events: none;
+
+    font-family: 'Cinzel', serif;
+    font-size: clamp(14px, 2vw, 22px);
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-shadow: 0 3px 12px #000;
+}
+
+/* Stack both messages in the same place */
+.artwork-caption span {
+    display: block;
+    grid-area: 1 / 1;
+    transition: opacity 0.5s ease;
+}
+
+.artwork-caption {
+    display: grid;
+}
+
+/* Default campfire message */
+.caption-default {
+    opacity: 1;
+}
+
+/* Hidden Warchief message */
+.caption-hover {
+    opacity: 0;
+}
+
+/* Swap text when hovered */
+.about-artwork:hover .caption-default {
+    opacity: 0;
+}
+
+.about-artwork:hover .caption-hover {
+    opacity: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .artwork-caption {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .artwork-caption span {
+        transition: none;
+    }
+}
+
+
+/* =========================================
+   ABOUT US — ICHIGO BACKGROUND
+========================================= */
+
+.about-text {
+    position: relative;
+    isolation: isolate;
+    padding: 40px;
+    border: 1px solid var(--border);
+    background: #111014;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+/* Bleach artwork behind the text */
+.about-text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(12, 10, 14, 0.92) 0%,
+            rgba(12, 10, 14, 0.78) 55%,
+            rgba(12, 10, 14, 0.65) 100%
+        ),
+        url("assets/images/bleach-ichigo-hollow.jpg");
+
+    background-size: cover;
+    background-position: 30% center;
+    background-repeat: no-repeat;
+
+    opacity: 0.65;
+    transition: opacity 0.5s ease,
+                transform 0.7s ease;
+}
+
+/* Bring artwork forward slightly on hover */
+.about-text:hover::before {
+    opacity: 0.9;
+    transform: scale(1.04);
+}
+
+/* Keep text above the artwork */
+.about-text h3,
+.about-text p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .about-text {
+        padding: 25px;
+    }
+
+    .about-text::before {
+        background-position: 25% center;
+    }
+}
+
+
+/* =========================================
+   BLEACH BACKGROUND HOVER TRANSITION
+   Hollow Ichigo -> Cosmic Ichigo
+========================================= */
+
+/* Keep both images inside the About text panel */
+.about-text {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* Original Hollow Ichigo background */
+.about-text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 8, 14, 0.78),
+            rgba(10, 8, 14, 0.86)
+        ),
+        url("assets/images/bleach-ichigo-hollow.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 1;
+    transform: scale(1);
+
+    transition: transform 0.8s ease;
+}
+
+/* New Cosmic Ichigo background - hidden initially */
+.about-text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 8, 14, 0.72),
+            rgba(10, 8, 14, 0.84)
+        ),
+        url("assets/images/bleach-cosmic-ichigo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transform: scale(1);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.8s ease;
+}
+
+/* Hover: reveal Cosmic Ichigo and zoom slightly */
+.about-text:hover::after {
+    opacity: 1;
+    transform: scale(1.06);
+}
+
+/* Keep text in front of both images */
+.about-text h3,
+.about-text p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Accessibility: disable animations when requested */
+@media (prefers-reduced-motion: reduce) {
+    .about-text::before,
+    .about-text::after {
+        transition: none;
+    }
+}
+
+
+/* =========================================
+   GOTEI THIRTEEN - ROSTER CARD POLISH
+========================================= */
+
+/* Smooth transitions for all member cards */
+.member-card {
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Hover effect */
+.member-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 28px rgba(180, 30, 40, 0.22),
+        0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Gold styling for officers */
+.member-card.warrior .member-rank {
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Armory button */
+.armory-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 22px;
+    padding: 12px 18px;
+
+    background: rgba(140, 28, 38, 0.2);
+    color: var(--gold);
+
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Button hover */
+.armory-button:hover,
+.armory-button:focus-visible {
+    background: var(--red);
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(220, 45, 55, 0.4);
+}
+
+/* Accessibility */
+.armory-button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+    .member-card,
+    .armory-button {
+        transition: none;
+    }
+
+    .member-card:hover,
+    .armory-button:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================
+   GOTEI THIRTEEN
+   CINEMATIC ANIMATIONS v1
+========================================= */
+
+/* 1. SCROLL REVEAL */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(26px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section heading gold glow */
+
+.heading-line {
+    box-shadow:
+        0 0 12px rgba(200, 164, 106, 0.35),
+        0 0 25px rgba(170, 30, 40, 0.15);
+}
+
+/* 2. CRIMSON MOUSE GLOW */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: radial-gradient(
+        380px circle at
+        var(--mouse-x, 75%)
+        var(--mouse-y, 50%),
+        rgba(230, 32, 50, 0.18),
+        transparent 72%
+    );
+
+    pointer-events: none;
+}
+
+/* 3. MEMBER CARD POLISH */
+
+.member-card {
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.member-details {
+    position: relative;
+}
+
+/* 4. BACK TO TOP */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    background: #681923;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+
+    color: var(--gold);
+    font-size: 26px;
+    font-weight: bold;
+
+    cursor: pointer;
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease,
+        background 0.3s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--red);
+    box-shadow: 0 0 20px rgba(220, 45, 55, 0.4);
+}
+
+.back-to-top:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .member-card {
+        will-change: auto;
+    }
+
+    .back-to-top {
+        transition: none;
+    }
+}
