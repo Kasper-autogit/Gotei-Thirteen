@@ -1317,3 +1317,104 @@ p {
     .orc-artwork-frame .orc-battle-animation { display: none; }
     .orc-artwork-frame .orc-battle-still { display: block; }
 }
+
+
+/* ===================================================
+   GOTEI THIRTEEN — WAR DRUMS / UNDEAD PALADIN PATCH
+   Built on the original polished navbar + guild styles.
+   Only additions below; existing components kept intact.
+=================================================== */
+
+/* Allow the new sound toggle to sit beside Join Discord. */
+.navbar { max-width: 1700px; }
+.nav-utilities { display:flex; align-items:center; gap:12px; flex:0 0 auto; }
+.sound-toggle {
+    display:inline-flex; align-items:center; justify-content:center; gap:9px;
+    min-height:46px; padding:10px 16px; border:1px solid rgba(200,164,106,.72);
+    border-radius:5px; background:rgba(22,14,18,.92); color:var(--gold);
+    font:700 12px/1.4 'Inter',sans-serif; white-space:nowrap; cursor:pointer;
+    transition:background .2s ease,transform .2s ease,border-color .2s ease;
+}
+.sound-toggle:hover { background:#3a1820; transform:translateY(-2px); }
+.sound-toggle.is-playing { background:#811b28; color:#fff; border-color:var(--gold); }
+.sound-toggle:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+/* The old nav button's mobile margin doesn't need to separate it from the new toggle. */
+.nav-utilities .nav-button { margin-left:0; }
+
+/* The original hero styles (centered title, compact leadership panel)
+   above remain authoritative. Explicitly preserve a centered single CTA. */
+.hero { justify-content:center; text-align:center; }
+.hero-content, .hero-description { margin-left:auto; margin-right:auto; }
+.hero-actions, .hero-meta { justify-content:center; }
+
+/* Background art on the LEFT side of the already-existing Orc showcase. */
+.orc-showcase-copy {
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    padding:clamp(35px,4vw,62px);
+    border:1px solid rgba(137,53,58,.54);
+    background:#110c11;
+    min-height:545px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.orc-showcase-copy::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background:
+        linear-gradient(115deg,rgba(15,7,11,.86),rgba(24,8,14,.77) 60%,rgba(24,8,14,.67)),
+        url("assets/images/undead-paladin-bg.png") center/cover no-repeat;
+}
+/* Preserve the dramatic larger Orc vs Night Elf panel from your latest preview. */
+.orc-showcase-inner {
+    width:min(100%,1500px);
+    grid-template-columns:minmax(0,1.35fr) minmax(310px,.82fr);
+    gap:clamp(22px,3vw,42px);
+    align-items:stretch;
+}
+.orc-artwork-frame {
+    display:flex;
+    width:100%;
+    max-width:560px;
+    height:auto;
+    margin:0 auto;
+}
+.orc-artwork-frame .orc-battle-animation,
+.orc-artwork-frame .orc-battle-still { width:100%; height:100%; object-fit:cover; }
+/* Text styles for the new recruitment message, without changing other paragraphs. */
+.orc-showcase-copy > .battle-tagline {
+    color:#e7bb78; font-style:italic; font-size:clamp(19px,2vw,23px);
+    margin-bottom:18px; line-height:1.5;
+}
+.orc-showcase-copy > .battle-closing {
+    margin-top:18px; font-style:italic; color:#e9d6b7;
+}
+.orc-showcase-copy .battle-closing strong {
+    display:block; margin-top:12px; color:var(--red-bright);
+    font-style:normal; font-weight:800; letter-spacing:2px;
+}
+@media(max-width:1240px) {
+    .navbar { flex-wrap:wrap; justify-content:center; }
+    .nav-utilities { margin-left:auto; }
+    .nav-links { order:3; width:100%; justify-content:center; }
+}
+@media(max-width:800px) {
+    .orc-showcase-inner { grid-template-columns:1fr; }
+    .orc-showcase-copy { min-height:400px; text-align:center; }
+    .orc-showcase-copy > p { margin-inline:auto; }
+    .orc-artwork-frame { max-width:480px; }
+}
+@media(max-width:620px) {
+    .nav-utilities { justify-content:center; flex-wrap:wrap; margin:0 auto; }
+    .sound-toggle { padding:9px 12px; min-height:40px; font-size:11px; }
+    .nav-utilities .nav-button { min-height:40px; }
+    .orc-showcase-copy { padding:42px 24px; }
+}
+@media(prefers-reduced-motion:reduce) {
+    .sound-toggle { transition:none; }
+    .sound-toggle:hover { transform:none; }
+}

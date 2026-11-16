@@ -45,11 +45,20 @@
                 <a href="roster.html">Roster</a>
                 <a href="#gallery">Gallery</a>
             </div>
-            <a href="https://discord.gg/TaR9vDCaCD" class="nav-button" target="_blank" rel="noopener noreferrer">
-                <span class="discord-mark" aria-hidden="true">✦</span> Join Discord <span aria-hidden="true">↗</span>
-            </a>
+            <div class="nav-utilities">
+                <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Toggle War Drums background music">
+                    <span class="sound-toggle-icon" aria-hidden="true">🥁</span>
+                    <span class="sound-toggle-text">War Drums: Off</span>
+                </button>
+                <a href="https://discord.gg/TaR9vDCaCD" class="nav-button" target="_blank" rel="noopener noreferrer">
+                    <span class="discord-mark" aria-hidden="true">✦</span> Join Discord <span aria-hidden="true">↗</span>
+                </a>
+            </div>
         </nav>
     </header>
+    <audio id="war-drums-audio" loop preload="none">
+        <source src="assets/audio/war-drums-amaksi.mp3" type="audio/mpeg">
+    </audio>
 
     <main>
 
@@ -117,12 +126,6 @@
 
                     </a>
 
-                    <a href="#about" class="button button-outline">
-
-                        Discover Our Story
-
-                    </a>
-
                 </div>
 
                 <div class="hero-meta">
@@ -165,10 +168,26 @@
                 <div class="orc-showcase-copy">
                     <p class="eyebrow">FOR THE HORDE <span aria-hidden="true">◆</span> WARRIOR SPIRIT</p>
                     <h2 id="orc-showcase-title">Ready for Battle</h2>
-                    <p>
-                        An orc warrior charges into battle against a Night Elf.
-                        One Guild. One Goal. Bring Glory to the Horde!
-                    </p>
+                    
+                    
+<p class="battle-tagline">
+    Victory is not given. It is taken.
+</p>
+
+<p>
+    Queue up, rally your allies, and charge into battle
+    alongside our seasoned PvP veterans. Whether you're new
+    to the battlegrounds or a battle-hardened warrior,
+    there's always room to fight, learn, and claim
+    victory together.
+</p>
+
+<p class="battle-closing">
+    Every warrior has a place among our ranks.
+    <strong>FOR THE HORDE!</strong>
+</p>
+
+                    
                 </div>
                 <div class="orc-artwork-frame">
                     <img class="orc-battle-animation"

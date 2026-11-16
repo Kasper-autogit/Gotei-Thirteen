@@ -158,6 +158,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    // =====================================
+    // 6. WAR DRUMS TOGGLE
+    // =====================================
+
+    const soundToggle = document.getElementById("sound-toggle");
+    const warDrumsAudio = document.getElementById("war-drums-audio");
+
+    if (soundToggle && warDrumsAudio) {
+        const soundLabel = soundToggle.querySelector(".sound-toggle-text");
+
+        function setSoundState(isPlaying) {
+            soundToggle.classList.toggle("is-playing", isPlaying);
+            soundToggle.setAttribute("aria-pressed", String(isPlaying));
+            if (soundLabel) {
+                soundLabel.textContent = isPlaying ? "War Drums: On" : "War Drums: Off";
+            }
+        }
+
+        setSoundState(false);
+
+        soundToggle.addEventListener("click", async () => {
+            if (warDrumsAudio.paused) {
+                try {
+                    await warDrumsAudio.play();
+                    setSoundState(true);
+                } catch (error) {
+                    console.warn("War drums audio could not start.", error);
+                    alert("Add the file assets/audio/war-drums-amaksi.mp3 first, then click the War Drums button again.");
+                    setSoundState(false);
+                }
+            } else {
+                warDrumsAudio.pause();
+                setSoundState(false);
+            }
+        });
+
+        warDrumsAudio.addEventListener("ended", () => setSoundState(false));
+        warDrumsAudio.addEventListener("pause", () => {
+            if (warDrumsAudio.currentTime > 0 && !warDrumsAudio.ended) {
+                setSoundState(false);
+            }
+        });
+    }
+
     console.log(
         "⚔ Gotei Thirteen — One Guild. One Goal. ⚔"
     );
