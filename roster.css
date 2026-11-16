@@ -1,0 +1,76 @@
+/* Dedicated roster page styles. Loaded after style.css */
+/* Roster-only styles. Safe to move into style.css after testing. */
+    .roster-page { min-height: 100vh; background: #0b0b0e; color: #f3eee8; }
+    .roster-hero {
+      padding: 100px max(6%,calc((100% - 1360px)/2)) 72px;
+      background: linear-gradient(90deg,rgba(9,7,10,.96),rgba(16,7,12,.67)),
+                  url("assets/images/horde-banner.jpg") center 45% / cover;
+      border-bottom: 1px solid #5d3035;
+    }
+    .roster-hero .eyebrow { color: #c8a46a; letter-spacing: 3px; }
+    .roster-hero h1 { font-size:clamp(42px,7vw,82px); line-height:1.1; margin:15px 0; }
+    .roster-hero h1 span { color:#e3444e; }
+    .roster-hero p:last-child { max-width:660px; }
+    .roster-content { width:min(1400px,calc(100% - 40px)); margin:0 auto; padding:55px 0 100px; }
+    .roster-filters {
+      display:grid; grid-template-columns:2fr repeat(3,1fr) auto;
+      gap:14px; align-items:end; padding:22px;
+      background:#171419; border:1px solid #523037; margin-bottom:22px;
+    }
+    .roster-filter { display:flex; flex-direction:column; gap:6px; }
+    .roster-filter label { font-size:12px; color:#c8a46a; font-weight:700; letter-spacing:.7px; }
+    .roster-filter input,.roster-filter select {
+      width:100%; min-width:0; height:44px; padding:0 12px;
+      border:1px solid #624047; border-radius:3px; color:#f4ebe5;
+      background:#100f12; font:inherit;
+    }
+    .roster-filter input:focus-visible,.roster-filter select:focus-visible {
+      outline:2px solid #c8a46a; outline-offset:2px;
+    }
+    .roster-clear {
+      height:44px; padding:0 15px; border:1px solid #c8a46a;
+      color:#c8a46a; background:transparent; font:inherit; cursor:pointer;
+    }
+    .roster-clear:hover { background:#78252e; color:white; }
+    .roster-count { color:#c8a46a; font-size:13px; margin:20px 0; }
+    .roster-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+    .roster-card {
+      overflow:hidden; background:#171419; border:1px solid #483238;
+      transition:transform .25s,border-color .25s,box-shadow .25s;
+    }
+    .roster-card:hover {
+      transform:translateY(-5px); border-color:#c8a46a;
+      box-shadow:0 12px 36px rgba(181,30,42,.22);
+    }
+    .roster-card.featured { border-color:#956944; }
+    .roster-portrait {
+      height:145px; display:grid; place-items:center;
+      background:radial-gradient(circle,rgba(153,30,45,.28),transparent 66%),#24161b;
+    }
+    .portrait-symbol { font-size:55px; color:#c8a46a; letter-spacing:6px; text-shadow:0 0 15px rgba(200,164,106,.25); }
+    .roster-card-body { padding:25px; }
+    .rank-label { font-size:11px; letter-spacing:1.7px; font-weight:700; color:#c8a46a; }
+    .roster-card h3 { font-size:23px; margin:10px 0; overflow-wrap:anywhere; }
+    .character-class { font-weight:700; font-size:14px; }
+    .character-detail { font-size:13px; margin-top:7px; }
+    .roster-armory {
+      display:inline-block; margin-top:22px; padding:11px 14px; text-decoration:none;
+      color:#c8a46a; background:#37151d; border:1px solid #c8a46a;
+      font-size:12px; font-weight:700; transition:background .2s,color .2s;
+    }
+    .roster-armory:hover,.roster-armory:focus-visible { color:white; background:#ae242c; }
+    .roster-empty,.roster-error { padding:25px; border:1px solid #5d3035; color:#ddd; }
+    .roster-note { margin-top:32px; color:#aaa0a0; font-size:12px; }
+    @media (max-width:1000px) {
+      .roster-filters { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .roster-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width:600px) {
+      .roster-hero { padding:68px 24px; }
+      .roster-filters,.roster-list { grid-template-columns:1fr; }
+      .roster-content { width:calc(100% - 28px); }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      .roster-card { transition:none; }
+      .roster-card:hover { transform:none; }
+    }

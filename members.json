@@ -1,0 +1,90 @@
+
+{
+  "members": [
+    {
+      "name": "Bigbody Bess",
+      "guildRank": "Guild Master",
+      "class": "Druid",
+      "role": "Flexible",
+      "specialty": "Feral Tank / DPS"
+    },
+    {
+      "name": "Swaggu Beef",
+      "guildRank": "Officer",
+      "class": "Warrior",
+      "race": "Tauren",
+      "role": "Tank",
+      "title": "Main Tank",
+      "specialty": "Protection / PvP Flag Carrier",
+      "featured": true,
+      "armory": "https://worldofwarcraft.blizzard.com/en-us/forever/us/armory/character/swaggu-beef/"
+    },
+    {
+      "name": "Shox Nbox",
+      "guildRank": "Officer",
+      "class": "Shaman",
+      "role": "DPS"
+    },
+    {
+      "name": "Afa Fisher",
+      "guildRank": "Officer",
+      "class": "Rogue",
+      "role": "DPS"
+    },
+    {
+      "name": "Belorn Seev",
+      "guildRank": "Officer",
+      "class": "Priest",
+      "role": "Healer",
+      "specialty": "Main Healer"
+    },
+    {
+      "name": "Big Pressure",
+      "guildRank": "Officer",
+      "class": "Mage",
+      "role": "DPS"
+    },
+    {
+      "name": "Liebe Devil",
+      "guildRank": "Officer",
+      "class": "Rogue",
+      "role": "DPS",
+      "armory": "https://worldofwarcraft.blizzard.com/en-us/forever/us/armory/character/liebe-devil/"
+    },
+    {
+      "name": "Oz Acho",
+      "guildRank": "Officer",
+      "class": "Mage",
+      "role": "DPS"
+    },
+    {
+      "name": "Tyrael Thegreat",
+      "guildRank": "Officer",
+      "class": "Paladin",
+      "role": "DPS",
+      "specialty": "Retribution"
+    },
+    
+    
+{
+  "name": "Jdawg Jdawgg",
+  "guildRank": "Officer",
+  "class": "Rogue",
+  "role": "DPS",
+  "armory": "https://worldofwarcraft.blizzard.com/en-us/forever/us/armory/character/jdawg-jdawgg/"
+}
+,
+    {
+      "name": "Deadeyee Ranger",
+      "guildRank": "Veteran",
+      "class": "Hunter",
+      "role": "DPS"
+    },
+    {
+      "name": "Ozacho Ozacho",
+      "guildRank": "Veteran",
+      "class": "Hunter",
+      "role": "DPS"
+    }
+  ]
+}

@@ -1,429 +1,481 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gotei Thirteen | WoW Forever Horde Guild</title>
+
     <meta name="description"
+
           content="Gotei Thirteen - a Horde community guild on WoW Forever US PvP.">
 
     <!-- Our custom styles -->
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Our JavaScript -->
+
     <script src="script.js" defer></script>
+
 </head>
 
 <body>
 
     <!-- =========================
+
          NAVIGATION
+
     ========================== -->
+
     <header class="site-header">
         <nav class="navbar" aria-label="Main navigation">
-
-            <a href="#home" class="guild-logo">
-                <span class="logo-symbol">十三</span>
-                <span>GOTEI <strong>THIRTEEN</strong></span>
+            <a href="#home" class="guild-logo" aria-label="Gotei Thirteen home">
+                <span class="logo-emblem" aria-hidden="true"><span class="logo-symbol">十三</span></span>
+                <span class="guild-wordmark"><span>GOTEI <strong>THIRTEEN</strong></span><small>HORDE · US PVP</small></span>
             </a>
-
             <div class="nav-links">
-                <a href="#home">Home</a>
+                <a href="#home" aria-current="page">Home</a>
                 <a href="#about">About</a>
                 <a href="#events">Events</a>
-                <a href="#roster">Roster</a>
+                <a href="roster.html">Roster</a>
                 <a href="#gallery">Gallery</a>
             </div>
-
-           
-<!-- Gotei Thirteen Discord invite -->
-<a
-    href="https://discord.gg/TaR9vDCaCD"
-    class="nav-button"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    Join Our Discord ↗
-</a>
-
-
+            <a href="https://discord.gg/TaR9vDCaCD" class="nav-button" target="_blank" rel="noopener noreferrer">
+                <span class="discord-mark" aria-hidden="true">✦</span> Join Discord <span aria-hidden="true">↗</span>
+            </a>
         </nav>
     </header>
-
 
     <main>
 
         <!-- =========================
+
              HERO / WELCOME
+
         ========================== -->
+
         <section id="home" class="hero">
 
             <div class="hero-background"></div>
+
             <div class="hero-character"></div>
 
             <div class="hero-content">
+
                 <p class="eyebrow">
+
                     WORLD OF WARCRAFT FOREVER
+
                     <span class="separator">◆</span>
+
                     US PVP
+
                 </p>
 
                 <h1>
+
                     GOTEI
+
                     <span>THIRTEEN</span>
+
                 </h1>
 
                 <p class="hero-subtitle">
+
                     United Under the Horde Banner
+
                 </p>
 
                 <p class="hero-description">
+
                     Welcome to Gotei Thirteen.
 
                     A community of adventurers, warriors,
+
                     and friends forging our own legacy
+
                     across Azeroth.
 
                     From battleground victories to dungeon
+
                     adventures, every member has a place
+
                     among our ranks.
+
                 </p>
 
                 <div class="hero-actions">
+
                     <a href="#events" class="button button-primary">
+
                         Upcoming Events
+
                     </a>
 
-                    <a href="#roster" class="button button-outline">
-                        Meet the Guild
+                    <a href="#about" class="button button-outline">
+
+                        Discover Our Story
+
                     </a>
+
                 </div>
 
                 <div class="hero-meta">
-                    <span>HORDE</span>
-                    <span>US PVP</span>
-                    <span>COMMUNITY & BATTLEGROUNDS</span>
-                </div>
-            </div>
 
-          
+                    <span>HORDE</span>
+
+                    <span>US PVP</span>
+
+                    <span>COMMUNITY & BATTLEGROUNDS</span>
+
+                </div>
+
+            </div>
 
         </section>
 
+        <!-- FEATURED LEADERSHIP AND ARMORY -->
+        <section class="leadership-feature" aria-label="Guild leadership and Armory">
+            <aside class="about-roster-callout" aria-labelledby="about-roster-title">
+                                <div class="about-roster-mark" aria-hidden="true">
+                                    <svg viewBox="0 0 64 72" width="55" height="62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 4 58 13v20c0 17-11 27-26 34C17 60 6 50 6 33V13L32 4Z" stroke="currentColor" stroke-width="3"/>
+                                        <path d="M32 18v32M20 32h24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="about-roster-copy">
+                                    <p class="eyebrow">THE FACES BEHIND THE BANNER</p>
+                                    <h3 id="about-roster-title">Meet Our Guild Leaders</h3>
+                                    <p>Stand alongside the Guild Master, Officers, and Veterans of Gotei Thirteen. Explore their roles and view their WoW Forever Armory profiles.</p>
+                                </div>
+                                <a href="roster.html" class="about-roster-link">
+                                    <span>Explore the Guild Roster</span> <span aria-hidden="true">↗</span>
+                                </a>
+                            </aside>
+        </section>
+
+        <!-- ANIMATED HORDE BATTLE - immediately below our roster invitation -->
+        <section id="orc-showcase" class="orc-showcase" aria-labelledby="orc-showcase-title">
+            <div class="orc-showcase-inner">
+                <div class="orc-showcase-copy">
+                    <p class="eyebrow">FOR THE HORDE <span aria-hidden="true">◆</span> WARRIOR SPIRIT</p>
+                    <h2 id="orc-showcase-title">Ready for Battle</h2>
+                    <p>
+                        An orc warrior charges into battle against a Night Elf.
+                        One Guild. One Goal. Bring Glory to the Horde!
+                    </p>
+                </div>
+                <div class="orc-artwork-frame">
+                    <img class="orc-battle-animation"
+                         src="assets/images/orc-vs-night-elf.gif"
+                         alt="Animated fantasy battle: a green orc swings an axe, defeating a purple-skinned elf who raises his arms and falls"
+                         width="377" height="508" loading="lazy">
+                    <img class="orc-battle-still"
+                         src="assets/images/orc-vs-night-elf-still.webp"
+                         alt="A green orc warrior confronts an elf in a dramatic fantasy battle"
+                         width="377" height="508" loading="lazy">
+                </div>
+            </div>
+        </section>
 
         <!-- =========================
+
              ABOUT THE GUILD
+
         ========================== -->
+
         <section id="about" class="section about-section">
 
             <div class="section-heading">
+
                 <p class="eyebrow">OUR STORY</p>
+
                 <h2>Welcome to the Thirteen</h2>
+
                 <div class="heading-line"></div>
+
             </div>
 
             <div class="about-layout">
 
-
-
 <!-- Interactive Guild Artwork -->
+
 <div class="about-artwork">
 
     <!-- Default image -->
+
     <img
+
         src="assets/images/guild-campfire.png"
+
         alt="Adventurers gathered around a campfire"
+
         class="artwork-default"
+
     >
 
     <!-- Image shown on hover -->
+
     <img
+
         src="assets/images/horde-warchief-throne.jpg"
+
         alt="Horde Warchief seated upon his throne"
+
         class="artwork-hover"
+
     >
 
-    <
 <!-- Guild motto changes when hovering over artwork -->
+
 <div class="artwork-caption">
 
     <!-- Campfire message -->
+
     <span class="caption-default">
+
         THE JOURNEY IS BETTER TOGETHER
+
     </span>
 
     <!-- Warchief message -->
+
     <span class="caption-hover">
+
         ONE GUILD. ONE GOAL. BRING GLORY TO THE HORDE!
+
     </span>
 
 </div>
 
-
 </div>
 
-
                 <div class="about-text">
+
                     <h3>More Than Just a Guild</h3>
 
                     <p>
+
                         Gotei Thirteen is built around
+
                         friendship, teamwork, and enjoying
+
                         the journey through WoW Forever.
+
                     </p>
 
                     <p>
+
                         Whether you're leveling your first
+
                         character, running battlegrounds,
+
                         exploring dungeons, or simply
+
                         fishing between queues, there's
+
                         always something to do together.
+
                     </p>
 
                     <p>
+
                         We believe great guilds are built
+
                         through shared adventures and
+
                         memorable moments.
+
                     </p>
+
                 </div>
 
                 <div class="guild-values">
+
                     <article class="value-card">
+
                         <span class="value-icon">⚔</span>
+
                         <h4>Fight Together</h4>
+
                         <p>Battlegrounds, PvP, and teamwork.</p>
+
                     </article>
 
                     <article class="value-card">
+
                         <span class="value-icon">✦</span>
+
                         <h4>Grow Together</h4>
+
                         <p>Leveling, professions, and dungeons.</p>
+
                     </article>
 
                     <article class="value-card">
+
                         <span class="value-icon">◆</span>
+
                         <h4>Stay Together</h4>
+
                         <p>Good friends and great memories.</p>
+
                     </article>
+
                 </div>
 
             </div>
-        </section>
 
+        </section>
 
         <!-- =========================
              GUILD EVENTS
         ========================== -->
         <section id="events" class="section events-section">
-
             <div class="section-heading">
                 <p class="eyebrow">GUILD OPERATIONS</p>
                 <h2>Guild Events</h2>
                 <div class="heading-line"></div>
-
-                <p>
-                    Rally your allies. Prepare for battle.
-                    Join the next guild adventure.
-                </p>
+                <p>New adventures ahead. Rally your allies, build our ranks, and bring glory to the Horde!</p>
             </div>
 
             <div class="events-grid">
-
+                <!-- This weekend: planned guild outing -->
                 <article class="event-card featured-event">
-
                     <div class="event-image">
-                        <span class="event-tag">FEATURED EVENT</span>
-                        <span class="event-symbol">⚔</span>
+                        <span class="event-tag">THIS WEEKEND · PLANNED</span>
+                        <span class="event-symbol" aria-hidden="true">⚔</span>
                     </div>
-
                     <div class="event-details">
-                        <p class="event-date">
-                            NOVEMBER 13–15, 2026
-                        </p>
-
-                        <h3>Level 21–29 PvP Weekend</h3>
-
+                        <p class="event-date">NOVEMBER 21–22, 2026 · TIME TBD</p>
+                        <h3>Stranglethorn Vale PvP Weekend</h3>
                         <p>
-                            Gotei Thirteen takes to the
-                            battlegrounds! Join guildmates
-                            for Warsong Gulch and
-                            Arathi Basin throughout
-                            the weekend.
+                            Gotei Thirteen is heading into Stranglethorn Vale for some
+                            open-world Horde PvP! Bring your friends, group up with guildmates,
+                            and see what trouble we can find in STV.
                         </p>
-
+                        <p>
+                            <strong>Possible bonus objective:</strong> a run at the Gurubashi Arena
+                            chest, if enough members are interested and the timing works out.
+                            The chest attempt isn't guaranteed.
+                        </p>
                         <div class="event-info">
-                            <span>⚔ Warsong Gulch</span>
-                            <span>◆ Arathi Basin</span>
-                            <span>★ Levels 21–29</span>
+                            <span>⚔ STV World PvP</span>
+                            <span>◆ Guild Groups</span>
+                            <span>★ Possible Arena Chest</span>
                         </div>
-
-                        <span class="event-status">
-                            Guild Event
-                        </span>
+                        <span class="event-status">Planning · Details in Discord</span>
                     </div>
-
                 </article>
 
-                <article class="event-card future-event">
+                <!-- Guild growth and leadership -->
+                <article class="event-card future-event recruitment-event">
                     <div class="future-event-content">
-                        <span class="future-icon">+</span>
-                        <h3>More Adventures Ahead</h3>
-
+                        <span class="future-icon" aria-hidden="true">✦</span>
+                        <p class="event-date">OFFICERS &amp; VETERANS</p>
+                        <h3>Build Our Ranks</h3>
                         <p>
-                            Future guild events, dungeon
-                            runs, and community activities
-                            will appear here.
+                            Calling on our Officers and Veterans: let's work together
+                            to welcome new faces, recruit more Horde members, and help
+                            them find their place in Gotei Thirteen.
                         </p>
+                        <div class="event-info">
+                            <span>◆ Officer &amp; Veteran Focus</span>
+                            <span>⚔ Recruitment</span>
+                        </div>
+                        <span class="event-status">Ongoing Guild Goal</span>
                     </div>
                 </article>
-
             </div>
+
+            <!-- Past event: keep the appreciation, not an outdated featured card -->
+            <details class="event-archive">
+                <summary>Past event · November 13–15 PvP Weekend <span aria-hidden="true">+</span></summary>
+                <div class="event-archive-body">
+                    <p>
+                        Thank you to everyone who kept an open mind and gave our
+                        level 21–29 battleground weekend a good go!
+                        Whether you joined Warsong Gulch, Arathi Basin, or just
+                        cheered on the guild, we appreciate you being part of it.
+                        We'll keep trying new ways to have fun together.
+                    </p>
+                </div>
+            </details>
         </section>
 
-
         <!-- =========================
-             GUILD ROSTER
-        ========================== -->
-        <section id="roster" class="section roster-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">THE THIRTEEN</p>
-                <h2>Guild Roster</h2>
-                <div class="heading-line"></div>
-
-                <p>
-                    Meet the adventurers who carry
-                    the Gotei Thirteen banner.
-                </p>
-            </div>
-
-            <div class="roster-grid" id="roster-grid">
-
-                
-<!-- ======================================
-     GUILD ROSTER - SWAGGU BEEF
-====================================== -->
-
-<article class="member-card warrior">
-
-    <!-- Character portrait -->
-    <div class="member-portrait">
-        <span class="class-symbol">⚔</span>
-    </div>
-
-    <!-- Character information -->
-    <div class="member-details">
-
-        <!-- Guild rank -->
-        <p class="member-rank">
-            ★ GUILD OFFICER
-        </p>
-
-        <!-- Character name -->
-        <h3>Swaggu Beef</h3>
-
-        <!-- Character class -->
-        <p class="member-class">
-            Level 28 · Tauren Warrior
-        </p>
-
-        <!-- Guild role -->
-        <p class="member-role">
-            Main Tank · Protection Warrior
-        </p>
-
-        <!-- PvP specialty -->
-        <p class="member-role">
-            PvP · Flag Carrier
-        </p>
-
-        <!-- Server information -->
-        <p class="member-server">
-            Horde · US PvP
-        </p>
-
-        <!-- Official WoW Forever Armory -->
-        <a
-            href="https://worldofwarcraft.blizzard.com/en-us/forever/us/armory/character/swaggu-beef/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="armory-button"
-            aria-label="View Swaggu Beef on the WoW Forever Armory"
-        >
-            ⚔ View Character Armory ↗
-        </a>
-
-    </div>
-
-</article>
-
-                <!-- More guild members go here -->
-
-                <article class="member-card placeholder-card">
-                    <div class="member-portrait">
-                        <span class="class-symbol">+</span>
-                    </div>
-
-                    <div class="member-details">
-                        <p class="member-rank">GUILD ROSTER</p>
-                        <h3>More Members Soon</h3>
-
-                        <p class="member-role">
-                            New profiles will be added
-                            as our guild grows.
-                        </p>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
              SCREENSHOT GALLERY
+
         ========================== -->
+
         <section id="gallery" class="section gallery-section">
 
             <div class="section-heading">
+
                 <p class="eyebrow">HALL OF MEMORIES</p>
+
                 <h2>Guild Gallery</h2>
+
                 <div class="heading-line"></div>
 
                 <p>
+
                     Every victory has a story.
+
                     These are the moments worth remembering.
+
                 </p>
+
             </div>
 
             <div class="gallery-grid">
 
                 <div class="gallery-item">
+
                     <div class="gallery-placeholder">⚔</div>
+
                     <h3>Battleground Victories</h3>
+
                     <p>Our finest PvP moments.</p>
+
                 </div>
 
                 <div class="gallery-item">
+
                     <div class="gallery-placeholder">◆</div>
+
                     <h3>Guild Adventures</h3>
+
                     <p>Dungeons, exploration, and teamwork.</p>
+
                 </div>
 
                 <div class="gallery-item">
+
                     <div class="gallery-placeholder">✦</div>
+
                     <h3>Community Memories</h3>
+
                     <p>The moments between adventures.</p>
+
                 </div>
 
             </div>
+
         </section>
 
-
         <!-- =========================
+
              COMMUNITY / JOIN
+
         ========================== -->
+
         <section id="community" class="community-section">
 
             <div class="community-content">
@@ -433,56 +485,85 @@
                 <h2>Our Story Is Just Beginning</h2>
 
                 <p>
+
                     Whether you're a seasoned veteran or
+
                     a new adventurer, Gotei Thirteen
+
                     welcomes those looking for
+
                     friendship, teamwork, and adventure.
+
                 </p>
 
                 <div class="community-badge">
+
                     HORDE · US PVP · WOW FOREVER
+
                 </div>
 
                 <p class="community-note">
+
                     Find our members in-game to learn more.
+
                 </p>
 
             </div>
+
         </section>
 
     </main>
 
-
     <!-- =========================
+
          FOOTER
+
     ========================== -->
+
     <footer class="site-footer">
 
         <div class="footer-brand">
+
             <span class="logo-symbol">十三</span>
+
             <h3>GOTEI THIRTEEN</h3>
+
             <p>United Under the Horde Banner</p>
+
         </div>
 
         <div class="footer-links">
+
             <a href="#home">Home</a>
+
             <a href="#events">Events</a>
-            <a href="#roster">Roster</a>
+
+            <a href="roster.html">Roster</a>
+
             <a href="#gallery">Gallery</a>
+
         </div>
 
         <p class="footer-disclaimer">
+
             Unofficial World of Warcraft fan guild website.
+
             Not affiliated with Blizzard Entertainment.
+
         </p>
 
         <p class="copyright">
+
             &copy; <span id="current-year">2026</span>
+
             Gotei Thirteen.
+
             Built by the guild, for the guild.
+
         </p>
 
     </footer>
 
 </body>
+
 </html>
